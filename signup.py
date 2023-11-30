@@ -1,0 +1,86 @@
+from tkinter import *
+
+#import image
+#Img=image.open("C:/UsersHP/Desktop/octor/img")
+#Photo=ImageTk.Photoimage(img)
+
+root = Tk()
+root.geometry('500x600')
+root.title('Register with the Doctors')
+#Img=image.open("C:/UsersHP/Desktop/octor/img")
+#Photo=ImageTk.Photoimage(img) 
+
+fn=StringVar()
+ln=StringVar() 
+var=StringVar() 
+dob=StringVar()
+var_c1="Java"
+var_c2="Python"
+radio_var=StringVar()
+#radio_var1=StringVar()
+"""
+menu=Menu(root)
+root.config(menu=menu)
+
+subm1=Menu(menu)
+menu.add_cascade(label="File", menu=subm1)
+subm1.add(Label="Exit")
+
+
+
+def printt():
+   first=fn.get()
+   sec=ln.get()
+   dob1=dob.get()
+   var1=var.get()
+   print(f"Your Fullname is {first}{sec}")
+   print(f"Your Age is {dob1}")
+   print(f"Your Country is {var1}")
+"""
+
+def exitt():
+   exit()
+
+label0=Label(root, text="Sign-Up", relief="solid", width=20, font=("arial", 19, "bold"))
+label0.place(x=90, y=150)
+
+
+
+label1=Label(root, text="FirstName:", width=20, font=("bold", 10))
+label1.place(x=80, y=240)
+
+Entry1=Entry(root,  textvar=ln)
+Entry1.place(x=240, y=242)
+
+label2=Label(root, text="LatName:", width=20, font=("bold", 10))
+label2.place(x=80, y=280)
+
+Entry2=Entry(root,  textvar=fn)
+Entry2.place(x=240, y=282)
+ 
+label3=Label(root, text="Dob:", width=20, font=("bold", 10))
+label3.place(x=80, y=320)
+
+Entry3=Entry(root,  textvar=dob)
+Entry3.place(x=240, y=322)
+
+label4=Label(root, text="Country:", width=20, font=("bold", 10))
+label4.place(x=80, y=360)
+
+list1=["Nigeria", "Nepal", "India", "China", "UK"]
+droplist=OptionMenu(root, var, *list1)
+var.set("select country")
+droplist.config(width=15)
+droplist.place(x=230,y=350)
+
+but_signup=Button(root, text='Signup', width=12, bg='brown', fg='white').place(x=150, y=500)
+but_quit=Button(root, text='Quit', width=12, bg='brown', fg='white', command=exitt).place(x=280, y=500)
+
+c1=Checkbutton(root, text='Java', variable=var_c1).place(x=290, y=460)
+c1=Checkbutton(root, text='Python', variable=var_c2).place(x=290, y= 420)
+
+r1=Radiobutton(root, text="Male", variable=radio_var, value="Male").place(x=230, y=420)
+r2=Radiobutton(root, text="Female", variable=radio_var, value="Female").place(x=230, y=460)
+r3=Radiobutton(root, text="dog", variable=radio_var, value="dog").place(x=230, y=480)
+r4=Radiobutton(root, text="cat;", variable=radio_var, value="cat").place(x=230, y=500)
+
